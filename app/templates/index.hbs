@@ -1,0 +1,11 @@
+<h1>Is Ember Really Fast Yet?</h1>
+<h3>Test #1: graphs in an each</h3>
+{{#each graphData in model}}
+  {{#nf-graph width=200 height=75}}
+    {{#nf-graph-content}}
+      {{nf-line data=graphData}}
+    {{/nf-graph-content}}
+    {{#nf-x-axis as |tick|}}<text>{{tick.value}}</text>{{/nf-x-axis}}
+    {{#nf-y-axis as |tick|}}<text>{{tick.value}}</text>{{/nf-y-axis}}
+  {{/nf-graph}}
+{{/each}}
