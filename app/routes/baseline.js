@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function(){
+  model: function() {
     return range(100).map(() => range(30).map(x => ({ x, y: Math.random() * 100 })));
   }
 });
