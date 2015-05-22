@@ -6863,7 +6863,7 @@ catch(err) {
 if (runningTests) {
   require("is-ember-really-fast-yet/tests/test-helper");
 } else {
-  require("is-ember-really-fast-yet/app")["default"].create({"name":"is-ember-really-fast-yet","version":"0.0.0.c0ec5e86"});
+  require("is-ember-really-fast-yet/app")["default"].create({"name":"is-ember-really-fast-yet","version":"0.0.0.f2bed138"});
 }
 
 /* jshint ignore:end */
