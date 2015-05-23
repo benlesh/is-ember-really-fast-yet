@@ -1,11 +1,33 @@
 <h1>Is Ember Really Fast Yet?</h1>
 <h3>Test #1: graphs in an each</h3>
-{{#each graphData in model}}
-  {{#nf-graph width=200 height=75}}
-    {{#nf-graph-content}}
-      {{nf-line data=graphData}}
-    {{/nf-graph-content}}
-    {{#nf-x-axis as |tick|}}<text>{{tick.value}}</text>{{/nf-x-axis}}
-    {{#nf-y-axis as |tick|}}<text>{{tick.value}}</text>{{/nf-y-axis}}
-  {{/nf-graph}}
-{{/each}}
+
+<button {{action "toggle"}}>Show/hide</button>
+
+{{#if isShowing}}
+  {{#each model as |line|}}
+    {{#x-graph
+      minX=0
+      maxX=100
+      topY=100
+      rightX=100
+      bottomY=0
+      leftX=0
+      width=200
+      height=100
+      marginBottom=20
+      marginLeft=50
+      marginRight=10
+      marginTop=10 as |graph|}}
+        {{#x-graph-content graph=graph}}
+          {{x-line data=line.data graph=graph}}
+        {{/x-graph-content}}
+      {{#x-x-axis graph=graph height=20 count=8 as |tick|}}
+        <text>{{tick}}</text>
+      {{/x-x-axis}}
+
+      {{#x-y-axis graph=graph width=50 count=5 as |tick|}}
+        <text>{{tick}}</text>
+      {{/x-y-axis}}
+    {{/x-graph}}
+  {{/each}}
+{{/if}}

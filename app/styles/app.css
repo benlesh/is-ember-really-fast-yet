@@ -1,13 +1,27 @@
-.baseline path {
-	fill: none;
-	stroke: red;
-	stroke-width: 1px;
+.x-line-path {
+  fill: none;
+  stroke-width: 1px;
+  stroke: red;
 }
-.baseline text {
-	font-family: "san-serif";
-	font-size: 10px;
+
+.x-x-axis-tick > text {
+  font-family: Consolas, Monospaced;
+  font-size: 12px;
+  alignment-baseline: hanging;
+  text-anchor: middle;
 }
-.baseline line {
-	stroke: lightgray;
-	stroke-width: 1px;	
+
+.x-graph-bg {
+  fill: #eeeeee;
+}
+
+.x-graph-content-bg {
+  fill: white;
+}
+
+.x-y-axis-tick > text {
+  font-family: Consolas, Monospaced;
+  font-size: 12px;
+  text-anchor: end;
+  alignment-baseline: middle;
 }

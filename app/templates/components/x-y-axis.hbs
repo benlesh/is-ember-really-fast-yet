@@ -1,0 +1,7 @@
+<g class="x-y-axis">
+  {{#each ticks as |tick|}}
+    <g class="x-y-axis-tick" transform="translate({{tick.x}}, {{tick.y}})">
+      {{yield tick.value}}
+    </g>
+  {{/each}}
+</g>
