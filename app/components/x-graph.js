@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  isGraph: true,
+  
   graphX() {
     return this.attrs.marginLeft;
   },

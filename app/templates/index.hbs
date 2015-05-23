@@ -14,15 +14,15 @@
     marginBottom=20
     marginLeft=50
     marginRight=10
-    marginTop=10 as |graph|}}
-      {{#x-graph-content graph=graph}}
-        {{x-line data=line.data graph=graph}}
+    marginTop=10}}
+      {{#x-graph-content}}
+        {{x-line data=line.data}}
       {{/x-graph-content}}
-    {{#x-x-axis graph=graph height=20 count=8 as |tick|}}
+    {{#x-x-axis height=20 count=8 as |tick|}}
       <text>{{tick}}</text>
     {{/x-x-axis}}
 
-    {{#x-y-axis graph=graph width=50 count=5 as |tick|}}
+    {{#x-y-axis width=50 count=5 as |tick|}}
       <text>{{tick}}</text>
     {{/x-y-axis}}
   {{/x-graph}}

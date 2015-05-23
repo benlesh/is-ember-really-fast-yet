@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   tagName: '',
 
   path: Ember.computed(function() {
-    let graph = this.attrs.graph.value;
+    let graph = this.graph;
 
     var scaleX = graph.scaleX();
     var scaleY = graph.scaleY();
@@ -13,5 +13,9 @@ export default Ember.Component.extend({
       .y(d => scaleY(d.y));
 
     return lineFn(this.attrs.data.value);
-  })
+  }),
+
+  init() {
+    this.graph = this.nearestWithProperty('isGraph');
+  }
 });

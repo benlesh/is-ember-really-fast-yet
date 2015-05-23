@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   tagName: '',
 
   ticks: Ember.computed(function() {
-    let graph = this.attrs.graph.value;
+    let graph = this.graph;
 
     var yOffset = graph.graphY();
     var scaleY = graph.scaleY();
@@ -15,5 +15,9 @@ export default Ember.Component.extend({
         value: tick,
         x: x
       }));
-  })
+  }),
+
+  init() {
+    this.graph = this.nearestWithProperty('isGraph');
+  }
 });
