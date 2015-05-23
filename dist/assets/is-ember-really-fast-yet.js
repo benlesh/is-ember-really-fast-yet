@@ -4257,38 +4257,44 @@ define('is-ember-really-fast-yet/templates/baseline', ['exports'], function (exp
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("  ");
           dom.appendChild(el0, el1);
+          var el1 = dom.createElement("div");
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
           dom.setNamespace("http://www.w3.org/2000/svg");
-          var el1 = dom.createElement("svg");
-          dom.setAttribute(el1,"width","200");
-          dom.setAttribute(el1,"height","75");
-          dom.setAttribute(el1,"class","baseline");
-          var el2 = dom.createTextNode("\n    ");
+          var el2 = dom.createElement("svg");
+          dom.setAttribute(el2,"width","200");
+          dom.setAttribute(el2,"height","75");
+          dom.setAttribute(el2,"class","baseline");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("path");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("line");
+          dom.setAttribute(el3,"x1","20");
+          dom.setAttribute(el3,"y1","50");
+          dom.setAttribute(el3,"x2","200");
+          dom.setAttribute(el3,"y2","50");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("line");
+          dom.setAttribute(el3,"x1","20");
+          dom.setAttribute(el3,"y1","0");
+          dom.setAttribute(el3,"x2","20");
+          dom.setAttribute(el3,"y2","50");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("  ");
+          dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
-          var el2 = dom.createElement("path");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n    ");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createElement("line");
-          dom.setAttribute(el2,"x1","20");
-          dom.setAttribute(el2,"y1","50");
-          dom.setAttribute(el2,"x2","200");
-          dom.setAttribute(el2,"y2","50");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n    ");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createElement("line");
-          dom.setAttribute(el2,"x1","20");
-          dom.setAttribute(el2,"y1","0");
-          dom.setAttribute(el2,"x2","20");
-          dom.setAttribute(el2,"y2","50");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createComment("");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createComment("");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("  ");
+          var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
@@ -4315,7 +4321,7 @@ define('is-ember-really-fast-yet/templates/baseline', ['exports'], function (exp
           } else {
             fragment = this.build(dom);
           }
-          var element2 = dom.childAt(fragment, [1]);
+          var element2 = dom.childAt(fragment, [1, 1]);
           var element3 = dom.childAt(element2, [1]);
           var attrMorph0 = dom.createAttrMorph(element3, 'd');
           var morph0 = dom.createMorphAt(element2,7,7);
@@ -6863,7 +6869,7 @@ catch(err) {
 if (runningTests) {
   require("is-ember-really-fast-yet/tests/test-helper");
 } else {
-  require("is-ember-really-fast-yet/app")["default"].create({"name":"is-ember-really-fast-yet","version":"0.0.0.c6860a2e"});
+  require("is-ember-really-fast-yet/app")["default"].create({"name":"is-ember-really-fast-yet","version":"0.0.0.9f7f58c0"});
 }
 
 /* jshint ignore:end */

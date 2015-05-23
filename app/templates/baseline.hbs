@@ -1,6 +1,7 @@
 <h1>Is Ember Really Fast Yet?</h1>
 <h3>Baseline: No Ember components. SVG's in an #each with d3</h3>
 {{#each graphData in model itemController="graph-item"}}
+  <div>
   <svg width=200 height=75 class="baseline">
     <path d={{graphData.graph.path}}></path>
     <line x1=20 y1=50 x2=200 y2=50></line>
@@ -12,4 +13,5 @@
       <text x={{tick.x}} y={{tick.y}}>{{tick.text}}</text>
     {{/each}}
   </svg>
+  </div>
 {{/each}}
